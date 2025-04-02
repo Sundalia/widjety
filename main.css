@@ -1,0 +1,103 @@
+body {
+    background-color: darkgreen;
+    opacity: 1;
+}
+.parent_canvas {
+    opacity: 1;
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    z-index: 100;
+    display: flex;
+}
+.sub_parent{
+    width: 250px !important;
+    height: 250px !important;
+    z-index: 100 !important;
+    position: absolute !important;
+    bottom: 10px !important;
+    right: 10px !important;
+}
+.jetty_canvas {
+    width: 250px !important;
+    height: 250px !important;
+    z-index: 101 !important;
+    position: absolute !important;
+    bottom: 10px !important;
+    right: 10px !important;
+
+}
+
+.take_out{
+    z-index: 102 !important;
+    position: relative;
+    opacity: 1;
+    height: 150px;
+    width: 100%;
+    display: none;
+}
+
+.dialog{
+    position: absolute;
+    z-index: 102 !important;
+    display: flex;
+    width: 30vw !important;
+    height: 40vh !important;
+    overflow: hidden;
+    top: 35% !important;
+    left: 35% !important;
+    margin: 0;
+    padding: 0;
+    border: none;
+    border-radius: 0.5rem;
+}
+
+.form{
+    background-color: #2b2b2b;
+    color: #e3e3e3;
+    width: 100%;
+    height: 100%;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    row-gap: 0.5rem;
+    font-family: "Inter", sans-serif;
+
+}
+
+.input{
+    background-color: #2b2b2b;
+    color: #e3e3e3;
+    min-height: 2rem !important;
+    border-radius: 5px;
+}
+.input:focus{
+
+}
+
+.submit{
+    width: 100%;
+    min-height: 2rem;
+    color: #e3e3e3;
+    background-color: #a2794e;
+    border: none;
+    border-radius: 0.2rem;
+
+}
+
+::backdrop {
+    opacity: 0.5;
+    filter: blur(5px);
+    color: #2b2b2b;
+}
+
+
+
+.inter-regular {
+            font-family: "Inter", sans-serif;
+            font-optical-sizing: auto;
+            font-weight: 200;
+            font-style: normal;
+        }
+
