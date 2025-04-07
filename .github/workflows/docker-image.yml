@@ -1,0 +1,26 @@
+name: Docker Image CI
+
+on:
+  push:
+    branches: [ "master" ]
+  pull_request:
+    branches: [ "master" ]
+
+jobs:
+
+  build:
+
+    runs-on: ubuntu-latest
+
+    
+    strategy:
+      matrix:
+        node-version: [18.x, 20.x, 22.x]
+
+    steps:
+    - uses: actions/checkout@v4
+    - name: Build the Docker image
+    - with:
+        node-version: ${{ matrix.node-version }}
+        cache: 'npm'
+    - run: docker build . --file Dockerfile --tag my-image-name:$(date +%s)
