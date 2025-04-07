@@ -8,28 +8,19 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="parent_canvas">
         <div class="sub_parent">
             <div class="take_out" id="take_out"></div>
             <canvas id="jetty_canvas" class="jetty_canvas"></canvas>
         </div>
 
         <dialog id="dialog" class="dialog">
-            <form class="form">
-                    <input class="input" placeholder="Имя">
-                    <input class="input" placeholder="Тел">
-                    <input class="input" placeholder="E-mail">
-                    <label>Что вас больше всего заинтересовало?</label>
-                    <select class="input">
-                        <option class="input">SEO</option>
-                        <option class="input">3D</option>
-                        <option>CRM</option>
-                        <option>API-телефония</option>
-                    </select>
-                <button id="submit" class="submit">CLOSE</button>
-            </form>
+            <div class="form">
+                <h1>Один шаг - и подарок Ваш!</h1>
+                <input  id="input" class="input" placeholder="Введите номер телефона">
+                <button id="submit" class="submit">Получить подарок</button>
+                <img class="logo" src="assets/logoJB.svg"/>
+            </div>
         </dialog>
-    </div>
-    <script type="module" src="/main.js"></script>
+    <script type="module" src="main.js"></script>
 </body>
 </html>
