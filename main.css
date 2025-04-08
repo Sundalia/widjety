@@ -72,7 +72,6 @@ html, body {
     color: #e3e3e3;
     min-height: 3rem;
     font-size: 2rem;
-    min-width: 100% !important;
     border-radius: 5px;
 }
 
@@ -103,5 +102,32 @@ html, body {
             font-optical-sizing: auto;
             font-weight: 200;
             font-style: normal;
-        }
+}
+
+
+@media screen and (max-device-width: 720px) {
+    .sub_parent {
+        margin-right: 1rem;
+        margin-bottom: 1rem;
+    }
+
+    .dialog{
+        transform: translate(10vw, 35vh);
+        max-width: 80vw;
+    }
+
+    .success{
+        transform: translate(10vw, 35vh);
+        max-width: 80vw;
+    }
+
+    .form{
+        max-width: 80%;
+    }
+
+    .input{
+        max-width: 90%;
+    }
+
+}
 

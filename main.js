@@ -22,9 +22,10 @@ const mask = new IMask(input, {
 
 
 spline.load('https://prod.spline.design/m52CqUnTm6OcO98L/scene.splinecode').then(()=>{
-    const text = spline.findObjectById('671e929a-31eb-45fc-a746-1236a464a8b4')
-
     canvas.addEventListener("click", (e) => {
+        takeOut.style.display='flex'
+    })
+    canvas.addEventListener("touchend", (e) => {
         takeOut.style.display='flex'
     })
     takeOut.addEventListener('click', (e) => {
