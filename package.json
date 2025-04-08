@@ -1,17 +1,26 @@
 {
   "name": "widjety",
   "version": "1.0.0",
-  "main": "main.js",
+  "main": "test.js",
   "scripts": {
     "dev": "npx vite"
   },
   "author": "",
   "license": "ISC",
-  "description": "",
   "dependencies": {
     "@splinetool/runtime": "^1.9.75",
     "axios": "^1.8.4",
     "imask": "^7.6.1",
     "vite": "^6.2.5"
-  }
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Sundalia/widjety.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Sundalia/widjety/issues"
+  },
+  "homepage": "https://github.com/Sundalia/widjety#readme",
+  "description": ""
 }

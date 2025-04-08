@@ -8,9 +8,9 @@ const canvas = document.getElementById('jetty_canvas')
 const takeOut = document.getElementById('take_out')
 const dialog = document.getElementById('dialog')
 const input = document.getElementById('input')
+const success = document.getElementById('success')
 
 
-//TODO: спрятать переменные
 const token = import.meta.env.VITE_TG_TOKEN
 const chatId = import.meta.env.VITE_TG_CHAT_ID
 
@@ -41,6 +41,10 @@ spline.load('https://prod.spline.design/m52CqUnTm6OcO98L/scene.splinecode').then
             console.log('sent')
         }).catch((error) => {
             console.log(error)
+        })
+        success.style.display='flex'
+        success.addEventListener('click', ()=>{
+            success.style.display='none'
         })
     }
 })
