@@ -123,11 +123,13 @@ html, body {
     .dialog{
         transform: translate(10vw, 15vh);
         width: 80vw;
+        min-height: 50vh;
     }
 
     .success{
         transform: translate(10vw, 15vh);
         max-width: 80vw;
+        min-height: 40vh;
     }
 
     .form{
