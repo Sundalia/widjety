@@ -1,5 +1,7 @@
 html, body {
     opacity: 1;
+    margin: 0;
+    padding: 0;
 }
 
 .sub_parent{
@@ -107,17 +109,24 @@ html, body {
 
 @media screen and (max-device-width: 720px) {
     .sub_parent {
-        margin-right: 1rem;
-        margin-bottom: 1rem;
+        overflow: hidden;
+        bottom: 0 !important;
+        right: 0 !important;
+
+    }
+
+    .jetty_canvas {
+        width: 150px !important;
+        height: 150px !important;
     }
 
     .dialog{
-        transform: translate(10vw, 35vh);
-        max-width: 80vw;
+        transform: translate(10vw, 15vh);
+        width: 80vw;
     }
 
     .success{
-        transform: translate(10vw, 35vh);
+        transform: translate(10vw, 15vh);
         max-width: 80vw;
     }
 
@@ -127,6 +136,14 @@ html, body {
 
     .input{
         max-width: 90%;
+        min-height: 1.5rem;
+        font-size: 1rem;
+    }
+
+    .submit{
+        min-height: 1.5rem;
+        font-size: 1rem;
+        font-weight: bold;
     }
 
 }
