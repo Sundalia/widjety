@@ -2,11 +2,11 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>widJety-box</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
         <div class="sub_parent">
@@ -16,6 +16,9 @@
 
         <dialog id="dialog" class="dialog">
             <div class="form">
+                <div class="close_popup">
+                    <button id="close_popup_btn" class="close_popup_btn"><i class="fa fa-close"></i></button>
+                </div>
                 <h2>Один шаг - и подарок Ваш!</h2>
                 <input  id="input" class="input" placeholder="Введите номер телефона">
                 <button id="submit" class="submit">Получить подарок</button>
@@ -24,6 +27,9 @@
         </dialog>
         <dialog id="success" class="success">
             <div class="form">
+                <div class="close_popup">
+                    <button id="close_success_btn" class="close_popup_btn"><i class="fa fa-close"></i></button>
+                </div>
                 <h2>Спаибо за желание быть счастливыми!</h2>
                 <h4>Мы свяжемся с вами в течение получаса</h4>
                 <img class="logo" src="assets/logoJB.svg"/>

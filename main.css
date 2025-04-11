@@ -1,7 +1,11 @@
-html, body {
+body {
     opacity: 1;
+    position: fixed;
+    z-index: 100;
     margin: 0;
     padding: 0;
+    width: 100vw;
+    height: 100vh;
 }
 
 .sub_parent{
@@ -69,26 +73,48 @@ html, body {
 
 }
 
+.close_popup{
+    width: 100%;
+    display: flex;
+    justify-content: end;
+    padding: 0;
+}
+
+.close_popup_btn{
+    background-color: #2b2b2b;
+    color: #e3e3e3;
+    border-radius: 0.5rem;
+    border-color: #e3e3e3;
+    min-height: 2rem;
+    min-width: 2rem;
+
+}
+
+.close_popup_btn:hover{
+    color: #a2794e;
+    border-color: #a2794e;
+}
+
 .input{
     background-color: #2b2b2b;
     color: #e3e3e3;
     min-height: 3rem;
     font-size: 2rem;
-    border-radius: 5px;
+    border-radius: 0.5rem;
 }
 
 .input:focus {
-    outline: 6px solid #a2794e;
+    outline: 3px solid #a2794e;
 }
 
 .submit{
-    width: 100%;
+    width: 98%;
     min-height: 3rem;
     font-size: 2rem;
     color: #e3e3e3;
     background-color: #a2794e;
     border: none;
-    border-radius: 0.2rem;
+    border-radius: 0.5rem;
 
 }
 
