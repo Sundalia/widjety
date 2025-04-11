@@ -27,15 +27,15 @@ const delay = ()=>{
     return new Promise(resolve => setTimeout(resolve,  3000))
 }
 
-await delay().then(()=> {
+delay().then(()=> {
     spline.load('https://prod.spline.design/m52CqUnTm6OcO98L/scene.splinecode').then(() => {
-        canvas.addEventListener("click", (e) => {
+        canvas.addEventListener("click", () => {
             takeOut.style.display = 'flex'
         })
-        canvas.addEventListener("touchend", (e) => {
+        canvas.addEventListener("touchend", () => {
             takeOut.style.display = 'flex'
         })
-        takeOut.addEventListener('click', (e) => {
+        takeOut.addEventListener('click', () => {
             dialog.style.display = 'flex'
         })
         submit.onclick = () => {
@@ -45,7 +45,7 @@ await delay().then(()=> {
             axios.post(`https://api.telegram.org/bot${token}/sendMessage`, {
                 chat_id: chatId,
                 text: `${data}`,
-            }).then((response) => {
+            }).then(() => {
                 console.log('sent')
             }).catch((error) => {
                 console.log(error)
