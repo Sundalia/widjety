@@ -2,13 +2,12 @@ import {Application} from "@splinetool/runtime";
 import IMask from "imask";
 const axios = require('axios');
 const css = require('sheetify');
-import 'dotenv/config.js'
 
 
 document.addEventListener("DOMContentLoaded", () => {
     css('./main.css')
-    const token = process.env.TG_TOKEN;
-    const chatId = process.env.TG_CHAT_ID;
+    const token = "7981426506:AAEePTjbr6Jwo716t8u0WdawOR7Fa2E9I3g"
+    const chatId = "-615417566"
 
     const body = document.querySelector('body');
 
