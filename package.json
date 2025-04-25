@@ -1,0 +1,35 @@
+{
+  "name": "widjety",
+  "version": "1.0.0",
+  "type": "commonjs",
+  "main": "main.js",
+  "scripts": {},
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@splinetool/runtime": "^1.9.82",
+    "axios": "^1.8.4",
+    "browser-resolve": "^2.0.0",
+    "css-extract": "^2.0.0",
+    "dotenv": "^16.5.0",
+    "imask": "^7.6.1",
+    "opentype.js": "^1.3.4",
+    "sheetify": "^8.0.0",
+    "ui": "^0.2.4"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Sundalia/widjety.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Sundalia/widjety/issues"
+  },
+  "homepage": "https://github.com/Sundalia/widjety#readme",
+  "description": "",
+  "devDependencies": {
+    "babel-preset-es2015": "^6.24.1",
+    "babelify": "^10.0.0",
+    "browserify": "^17.0.1",
+    "esmify": "^2.1.1"
+  }
+}
