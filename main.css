@@ -12,7 +12,7 @@
     width: 250px !important;
     height: 250px !important;
     z-index: 100 !important;
-    position: absolute !important;
+    position: fixed !important;
     bottom: 10px !important;
     right: 10px !important;
 }
@@ -36,28 +36,30 @@
 }
 
 .dialog{
-    position: absolute;
+    position: fixed;
+    top: 35vh;
+    left: 35vw;
     z-index: 101 !important;
     display: none;
     margin: 0;
     padding: 0;
     border: none;
     border-radius: 0.5rem;
-    transform: translate(35vw,35vh);
     min-width: 350px;
     min-height: 300px;
 
 }
 
 .success{
-    position: absolute;
+    position: fixed;
+    top: 35vh;
+    left: 35vw;
     z-index: 101 !important;
     display: none;
     margin: 0;
     padding: 0;
     border: none;
     border-radius: 0.5rem;
-    transform: translate(35vw,35vh);
     min-width: 350px;
     min-height: 300px;
 }
