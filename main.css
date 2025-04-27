@@ -35,6 +35,11 @@
     display: none;
 }
 
+.close_icon{
+    color: #e3e3e3;
+    background-color: #2b2b2b;
+}
+
 .dialog{
     position: fixed;
     top: 35vh;
