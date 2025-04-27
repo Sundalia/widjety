@@ -1,12 +1,12 @@
-.wrapper {
-    opacity: 1;
-    position: absolute;
-    z-index: 100;
-    margin: 0;
-    padding: 0;
-    width: 100vw;
-    height: 100vh;
-}
+/*.wrapper {*/
+/*    opacity: 1;*/
+/*    position: absolute;*/
+/*    z-index: 100;*/
+/*    margin: 0;*/
+/*    padding: 0;*/
+/*    width: 100vw;*/
+/*    height: 100vh;*/
+/*}*/
 
 .sub_parent{
     width: 250px !important;
@@ -43,7 +43,9 @@
     padding: 0;
     border: none;
     border-radius: 0.5rem;
-    transform: translate(43vw, 35vh);
+    transform: translate(35vw,35vh);
+    min-width: 350px;
+    min-height: 300px;
 
 }
 
@@ -55,7 +57,9 @@
     padding: 0;
     border: none;
     border-radius: 0.5rem;
-    transform: translate(40vw, 35vh);
+    transform: translate(35vw,35vh);
+    min-width: 350px;
+    min-height: 300px;
 }
 
 .form{
@@ -164,5 +168,12 @@
         font-weight: bold;
     }
 
+}
+
+@font-face {
+    font-family: "Inter", sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    src: url("https://cdn.jsdelivr.net/gh/Sundalia/widjety/assets/Inter_28pt-SemiBold.ttf");
 }
 

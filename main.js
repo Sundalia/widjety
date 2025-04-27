@@ -1,22 +1,19 @@
 import {Application} from "@splinetool/runtime";
 import IMask from "imask";
-const axios = require('axios');
+const axios = require("axios").default;
 const css = require('sheetify');
 
 
 document.addEventListener("DOMContentLoaded", () => {
     css('./main.css')
-    const token = "7981426506:AAEePTjbr6Jwo716t8u0WdawOR7Fa2E9I3g"
-    const chatId = "-615417566"
+    const token = "7981426506:AAGB3VXGzAKFC2RFutREfH_9hfxvKmFeyj0"
+    const chatId = "-4792672488"
 
     const body = document.querySelector('body');
 
-    const wrapper = document.createElement('div')
-    wrapper.setAttribute('class', 'wrapper')
-
     const parent = document.createElement('div')
     parent.setAttribute('class', 'sub_parent')
-    wrapper.appendChild(parent)
+    body.appendChild(parent)
 
     const takeOut = document.createElement('div')
     takeOut.setAttribute('class', 'take_out')
@@ -36,7 +33,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const dialogClose = document.createElement('button')
     dialogClose.setAttribute('class', 'close_popup_btn')
     const closeIcon = document.createElement('i')
-    closeIcon.setAttribute('class', 'fa fa-close')
+    closeIcon.setAttribute('data-src', 'https://cdn.jsdelivr.net/gh/Sundalia/widjety/assets/close.svg')
     dialogClose.appendChild(closeIcon)
     closeWrapper.appendChild(dialogClose)
     const dialogHeader = document.createElement('h2')
@@ -56,7 +53,7 @@ document.addEventListener("DOMContentLoaded", () => {
     form.appendChild(submit)
     form.appendChild(logo)
 
-    wrapper.appendChild(dialog)
+    body.appendChild(dialog)
 
     const success = document.createElement('dialog')
     success.setAttribute('class', 'success')
@@ -66,6 +63,7 @@ document.addEventListener("DOMContentLoaded", () => {
     closeSuccessWrapper.setAttribute('class', 'close_popup')
     const successClose = document.createElement('button')
     successClose.setAttribute('class', 'close_success_btn')
+    successClose.appendChild(closeIcon)
     closeSuccessWrapper.appendChild(successClose)
     const thanks = document.createElement('h2')
     thanks.innerText = `Спаибо за желание быть счастливыми!`
@@ -77,9 +75,9 @@ document.addEventListener("DOMContentLoaded", () => {
     successForm.appendChild(logo)
     success.appendChild(successForm)
 
-    wrapper.appendChild(success)
+    body.appendChild(success)
 
-    body.insertBefore(wrapper, body.firstChild)
+    body.insertBefore(parent, body.firstChild)
 
     const mask = new IMask(input, {
         mask: '+7(000)000-00-00'
@@ -97,21 +95,20 @@ document.addEventListener("DOMContentLoaded", () => {
             })
 
             takeOut.addEventListener('click', () => {
-                console.log('vvv')
                 dialog.style.display = 'flex'
             })
-            submit.onclick = () => {
+            submit.onclick = async (event) => {
                 dialog.style.display = 'none'
                 success.style.display = 'flex'
                 const data = input.value
-
-                axios.post(`https://api.telegram.org/bot${token}/sendMessage`, {
+                event.preventDefault()
+                await axios.post(`https://api.telegram.org/bot${token}/sendMessage`, {
                     chat_id: chatId,
                     text: `${data}`,
                 }).then(() => {
                     console.log('sent')
                 }).catch((error) => {
-                    console.log(error)
+                    console.error(error)
                 })
             }
             dialogClose.addEventListener('click', () => {
