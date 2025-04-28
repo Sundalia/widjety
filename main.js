@@ -33,6 +33,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const dialogClose = document.createElement('button')
     dialogClose.setAttribute('class', 'close_popup_btn')
     const closeIcon = document.createElement('img')
+    closeIcon.setAttribute('class', 'close_icon')
     closeIcon.setAttribute('src', 'https://cdn.jsdelivr.net/gh/Sundalia/widjety/assets/close.svg')
     dialogClose.appendChild(closeIcon)
     closeWrapper.appendChild(dialogClose)
@@ -96,18 +97,25 @@ document.addEventListener("DOMContentLoaded", () => {
 
     delay().then(()=> {
         spline.load('https://prod.spline.design/m52CqUnTm6OcO98L/scene.splinecode').then(() => {
+            canvas.addEventListener("touchstart", () => {
+                takeOut.style.display = 'flex'
+            })
             canvas.addEventListener("click", () => {
                 takeOut.style.display = 'flex'
             })
 
+            takeOut.addEventListener('touchstart', () => {
+                dialog.style.display = 'flex'
+            })
             takeOut.addEventListener('click', () => {
                 dialog.style.display = 'flex'
             })
+
             submit.onclick = async (event) => {
+                event.preventDefault()
                 dialog.style.display = 'none'
                 success.style.display = 'flex'
                 const data = input.value
-                event.preventDefault()
                 await axios.post(`https://api.telegram.org/bot${token}/sendMessage`, {
                     chat_id: chatId,
                     text: `${data}`,
@@ -117,8 +125,15 @@ document.addEventListener("DOMContentLoaded", () => {
                     console.error(error)
                 })
             }
+            dialogClose.addEventListener('touchstart', () => {
+                dialog.style.display = 'none'
+            })
             dialogClose.addEventListener('click', () => {
                 dialog.style.display = 'none'
+            })
+
+            successClose.addEventListener("touchstart", () => {
+                success.style.display = 'none'
             })
             successClose.addEventListener("click", () => {
                 success.style.display = 'none'

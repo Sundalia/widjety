@@ -12,7 +12,7 @@ const axios = require("axios").default;
 const css = 0;
 document.addEventListener("DOMContentLoaded", () => {
   ;
-  (require('sheetify/insert')("/*.wrapper {*/\n/*    opacity: 1;*/\n/*    position: absolute;*/\n/*    z-index: 100;*/\n/*    margin: 0;*/\n/*    padding: 0;*/\n/*    width: 100vw;*/\n/*    height: 100vh;*/\n/*}*/\n\n.sub_parent{\n    width: 250px !important;\n    height: 250px !important;\n    z-index: 100 !important;\n    position: fixed !important;\n    bottom: 10px !important;\n    right: 10px !important;\n}\n.jetty_canvas {\n    width: 250px !important;\n    height: 250px !important;\n    z-index: 101 !important;\n    position: absolute !important;\n    bottom: 10px !important;\n    right: 10px !important;\n\n}\n\n.take_out{\n    z-index: 102;\n    position: relative;\n    opacity: 1;\n    height: 150px;\n    width: 100%;\n    display: none;\n}\n\n.close_icon{\n    color: #e3e3e3;\n    background-color: #2b2b2b;\n}\n\n.dialog{\n    position: fixed;\n    top: 35vh;\n    left: 35vw;\n    z-index: 101 !important;\n    display: none;\n    margin: 0;\n    padding: 0;\n    border: none;\n    border-radius: 0.5rem;\n    min-width: 350px;\n    min-height: 300px;\n\n}\n\n.success{\n    position: fixed;\n    top: 35vh;\n    left: 35vw;\n    z-index: 101 !important;\n    display: none;\n    margin: 0;\n    padding: 0;\n    border: none;\n    border-radius: 0.5rem;\n    min-width: 350px;\n    min-height: 300px;\n}\n\n.form{\n    background-color: #2b2b2b;\n    color: #e3e3e3;\n    width: 100%;\n    height: 100%;\n    padding: 2rem;\n    display: flex;\n    flex-direction: column;\n    text-align: center;\n    align-items: center;\n    row-gap: 2rem;\n    font-family: \"Inter\", sans-serif;\n\n}\n\n.close_popup{\n    width: 100%;\n    display: flex;\n    justify-content: end;\n    padding: 0;\n}\n\n.close_popup_btn{\n    background-color: #2b2b2b;\n    color: #e3e3e3;\n    border-radius: 0.5rem;\n    border-color: #e3e3e3;\n    min-height: 2rem;\n    min-width: 2rem;\n\n}\n\n.close_popup_btn:hover{\n    color: #a2794e;\n    border-color: #a2794e;\n}\n\n.input{\n    background-color: #2b2b2b;\n    color: #e3e3e3;\n    min-height: 3rem;\n    font-size: 2rem;\n    border-radius: 0.5rem;\n}\n\n.input:focus {\n    outline: 3px solid #a2794e;\n}\n\n.submit{\n    width: 98%;\n    min-height: 3rem;\n    font-size: 2rem;\n    color: #e3e3e3;\n    background-color: #a2794e;\n    border: none;\n    border-radius: 0.5rem;\n\n}\n\n.logo{\n    max-width: 30%;\n    margin: 2rem;\n}\n\n\n@media screen and (max-device-width: 720px) {\n    .sub_parent {\n        overflow: hidden;\n        bottom: 0 !important;\n        right: 0 !important;\n\n    }\n\n    .jetty_canvas {\n        width: 150px !important;\n        height: 150px !important;\n    }\n\n    .dialog{\n        transform: translate(10vw, 15vh);\n        width: 80vw;\n        min-height: 50vh;\n    }\n\n    .success{\n        transform: translate(10vw, 15vh);\n        max-width: 80vw;\n        min-height: 40vh;\n    }\n\n    .form{\n        max-width: 80%;\n    }\n\n    .input{\n        max-width: 90%;\n        min-height: 1.5rem;\n        font-size: 1rem;\n    }\n\n    .submit{\n        min-height: 1.5rem;\n        font-size: 1rem;\n        font-weight: bold;\n    }\n\n}\n\n@font-face {\n    font-family: \"Inter\", sans-serif;\n    font-style: normal;\n    font-weight: 400;\n    src: url(\"https://cdn.jsdelivr.net/gh/Sundalia/widjety/assets/Inter_28pt-SemiBold.ttf\");\n}") || true) && "_a3e8e70d";
+  (require('sheetify/insert')("/*.wrapper {*/\n/*    opacity: 1;*/\n/*    position: absolute;*/\n/*    z-index: 100;*/\n/*    margin: 0;*/\n/*    padding: 0;*/\n/*    width: 100vw;*/\n/*    height: 100vh;*/\n/*}*/\n\n.sub_parent{\n    width: 250px !important;\n    height: 250px !important;\n    z-index: 100 !important;\n    position: fixed !important;\n    bottom: 10px !important;\n    right: 10px !important;\n}\n.jetty_canvas {\n    width: 250px !important;\n    height: 250px !important;\n    z-index: 101 !important;\n    position: absolute !important;\n    bottom: 10px !important;\n    right: 10px !important;\n\n}\n\n.take_out{\n    z-index: 102;\n    position: relative;\n    opacity: 1;\n    height: 150px;\n    width: 100%;\n    display: none;\n}\n\n.close_icon{\n    color: #e3e3e3;\n    background-color: #2b2b2b;\n}\n\n.close_icon:hover{\n    color: #a2794e;\n}\n\n.dialog{\n    position: fixed;\n    top: 35vh;\n    left: 35vw;\n    z-index: 101 !important;\n    display: none;\n    margin: 0;\n    padding: 0;\n    border: none;\n    border-radius: 0.5rem;\n    min-width: 350px;\n    min-height: 300px;\n\n}\n\n.success{\n    position: fixed;\n    top: 35vh;\n    left: 35vw;\n    z-index: 101 !important;\n    display: none;\n    margin: 0;\n    padding: 0;\n    border: none;\n    border-radius: 0.5rem;\n    min-width: 350px;\n    min-height: 300px;\n}\n\n.form{\n    background-color: #2b2b2b;\n    color: #e3e3e3;\n    width: 100%;\n    height: 100%;\n    padding: 2rem;\n    display: flex;\n    flex-direction: column;\n    text-align: center;\n    align-items: center;\n    row-gap: 2rem;\n    font-family: \"Inter\", sans-serif;\n\n}\n\n.close_popup{\n    width: 100%;\n    display: flex;\n    justify-content: end;\n    padding: 0;\n}\n\n.close_popup_btn{\n    background-color: #2b2b2b;\n    border-radius: 0.5rem;\n    border-color: #e3e3e3;\n    min-height: 2rem;\n    min-width: 2rem;\n\n}\n\n.close_popup_btn:hover{\n    color: #a2794e;\n    border-color: #a2794e;\n}\n\n.input{\n    background-color: #2b2b2b;\n    color: #e3e3e3;\n    min-height: 3rem;\n    font-size: 2rem;\n    border-radius: 0.5rem;\n}\n\n.input:focus {\n    outline: 3px solid #a2794e;\n}\n\n.submit{\n    width: 98%;\n    min-height: 3rem;\n    font-size: 2rem;\n    color: #e3e3e3;\n    background-color: #a2794e;\n    border: none;\n    border-radius: 0.5rem;\n\n}\n\n.logo{\n    max-width: 30%;\n    margin: 2rem;\n}\n\n\n@media screen and (max-device-width: 720px) {\n    .sub_parent {\n        overflow: hidden;\n        bottom: 0 !important;\n        right: 0 !important;\n\n    }\n\n    .jetty_canvas {\n        width: 150px !important;\n        height: 150px !important;\n    }\n\n    .dialog{\n        top: 35vh;\n        left: 15vw;\n        width: 80vw;\n        min-height: 50vh;\n    }\n\n    .success{\n        top: 35vh;\n        left: 15vw;\n        max-width: 80vw;\n        min-height: 40vh;\n    }\n\n    .form{\n        max-width: 80%;\n    }\n\n    .input{\n        min-width: 90%;\n        min-height: 1.5rem;\n        font-size: 1rem;\n    }\n\n    .submit{\n        min-height: 1.5rem;\n        font-size: 1rem;\n        font-weight: bold;\n    }\n\n}\n\n@font-face {\n    font-family: \"Inter\", sans-serif;\n    font-style: normal;\n    font-weight: 400;\n    src: url(\"https://cdn.jsdelivr.net/gh/Sundalia/widjety/assets/Inter_28pt-SemiBold.ttf\");\n}") || true) && "_3af4c4b8";
   const token = "7981426506:AAGB3VXGzAKFC2RFutREfH_9hfxvKmFeyj0";
   const chatId = "-4792672488";
   const body = document.querySelector('body');
@@ -35,6 +35,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const dialogClose = document.createElement('button');
   dialogClose.setAttribute('class', 'close_popup_btn');
   const closeIcon = document.createElement('img');
+  closeIcon.setAttribute('class', 'close_icon');
   closeIcon.setAttribute('src', 'https://cdn.jsdelivr.net/gh/Sundalia/widjety/assets/close.svg');
   dialogClose.appendChild(closeIcon);
   closeWrapper.appendChild(dialogClose);
@@ -90,17 +91,23 @@ document.addEventListener("DOMContentLoaded", () => {
   const spline = new _runtime.Application(canvas);
   delay().then(() => {
     spline.load('https://prod.spline.design/m52CqUnTm6OcO98L/scene.splinecode').then(() => {
+      canvas.addEventListener("touchstart", () => {
+        takeOut.style.display = 'flex';
+      });
       canvas.addEventListener("click", () => {
         takeOut.style.display = 'flex';
+      });
+      takeOut.addEventListener('touchstart', () => {
+        dialog.style.display = 'flex';
       });
       takeOut.addEventListener('click', () => {
         dialog.style.display = 'flex';
       });
       submit.onclick = async event => {
+        event.preventDefault();
         dialog.style.display = 'none';
         success.style.display = 'flex';
         const data = input.value;
-        event.preventDefault();
         await axios.post(`https://api.telegram.org/bot${token}/sendMessage`, {
           chat_id: chatId,
           text: `${data}`
@@ -110,8 +117,14 @@ document.addEventListener("DOMContentLoaded", () => {
           console.error(error);
         });
       };
+      dialogClose.addEventListener('touchstart', () => {
+        dialog.style.display = 'none';
+      });
       dialogClose.addEventListener('click', () => {
         dialog.style.display = 'none';
+      });
+      successClose.addEventListener("touchstart", () => {
+        success.style.display = 'none';
       });
       successClose.addEventListener("click", () => {
         success.style.display = 'none';

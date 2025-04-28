@@ -40,6 +40,10 @@
     background-color: #2b2b2b;
 }
 
+.close_icon:hover{
+    color: #a2794e;
+}
+
 .dialog{
     position: fixed;
     top: 35vh;
@@ -93,7 +97,6 @@
 
 .close_popup_btn{
     background-color: #2b2b2b;
-    color: #e3e3e3;
     border-radius: 0.5rem;
     border-color: #e3e3e3;
     min-height: 2rem;
@@ -149,13 +152,15 @@
     }
 
     .dialog{
-        transform: translate(10vw, 15vh);
+        top: 35vh;
+        left: 15vw;
         width: 80vw;
         min-height: 50vh;
     }
 
     .success{
-        transform: translate(10vw, 15vh);
+        top: 35vh;
+        left: 15vw;
         max-width: 80vw;
         min-height: 40vh;
     }
@@ -165,7 +170,7 @@
     }
 
     .input{
-        max-width: 90%;
+        min-width: 90%;
         min-height: 1.5rem;
         font-size: 1rem;
     }
