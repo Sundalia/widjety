@@ -97,18 +97,21 @@ document.addEventListener("DOMContentLoaded", () => {
 
     delay().then(()=> {
         spline.load('https://prod.spline.design/m52CqUnTm6OcO98L/scene.splinecode').then(() => {
-            canvas.addEventListener("touchstart", () => {
+            canvas.addEventListener("touchend", () => {
                 takeOut.style.display = 'flex'
             })
             canvas.addEventListener("click", () => {
                 takeOut.style.display = 'flex'
             })
 
-            takeOut.addEventListener('touchstart', () => {
+            takeOut.addEventListener('touchend', (e) => {
+                e.preventDefault()
                 dialog.style.display = 'flex'
+                takeOut.style.display = 'none'
             })
             takeOut.addEventListener('click', () => {
                 dialog.style.display = 'flex'
+                takeOut.style.display = 'none'
             })
 
             submit.onclick = async (event) => {
@@ -125,14 +128,16 @@ document.addEventListener("DOMContentLoaded", () => {
                     console.error(error)
                 })
             }
-            dialogClose.addEventListener('touchstart', () => {
+            dialogClose.addEventListener('touchend', (e) => {
+                e.preventDefault()
                 dialog.style.display = 'none'
             })
             dialogClose.addEventListener('click', () => {
+                e.preventDefault()
                 dialog.style.display = 'none'
             })
 
-            successClose.addEventListener("touchstart", () => {
+            successClose.addEventListener("touchend", () => {
                 success.style.display = 'none'
             })
             successClose.addEventListener("click", () => {
