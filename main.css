@@ -11,23 +11,23 @@
 .sub_parent{
     width: 250px !important;
     height: 250px !important;
-    z-index: 100 !important;
+    z-index: 1000 !important;
     position: fixed !important;
-    bottom: 10px !important;
+    bottom: 70px !important;
     right: 10px !important;
 }
 .jetty_canvas {
     width: 250px !important;
     height: 250px !important;
-    z-index: 101 !important;
+    z-index: 1001 !important;
     position: absolute !important;
-    bottom: 10px !important;
+    bottom: 70px !important;
     right: 10px !important;
 
 }
 
 .take_out{
-    z-index: 102;
+    z-index: 1002;
     position: relative;
     opacity: 1;
     height: 150px;
@@ -48,7 +48,7 @@
     position: fixed;
     top: 35vh;
     left: 35vw;
-    z-index: 101 !important;
+    z-index: 1001 !important;
     display: none;
     margin: 0;
     padding: 0;
@@ -63,7 +63,7 @@
     position: fixed;
     top: 35vh;
     left: 35vw;
-    z-index: 101 !important;
+    z-index: 1001 !important;
     display: none;
     margin: 0;
     padding: 0;
