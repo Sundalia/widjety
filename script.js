@@ -124,14 +124,16 @@ document.addEventListener("DOMContentLoaded", () => {
         e.preventDefault();
         dialog.style.display = 'none';
       });
-      dialogClose.addEventListener('click', () => {
+      dialogClose.addEventListener('click', e => {
         e.preventDefault();
         dialog.style.display = 'none';
       });
-      successClose.addEventListener("touchend", () => {
+      successClose.addEventListener("touchend", e => {
+        e.preventDefault();
         success.style.display = 'none';
       });
-      successClose.addEventListener("click", () => {
+      successClose.addEventListener("click", e => {
+        e.preventDefault();
         success.style.display = 'none';
       });
     });
