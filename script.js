@@ -56,7 +56,7 @@ document.addEventListener("DOMContentLoaded", () => {
   form.appendChild(dialogHeader);
   form.appendChild(input);
   form.appendChild(submit);
-  form.appendChild(logo);
+  form.appendChild(logoHref);
   body.appendChild(dialog);
   const success = document.createElement('dialog');
   success.setAttribute('class', 'success');
@@ -84,7 +84,7 @@ document.addEventListener("DOMContentLoaded", () => {
   successForm.appendChild(closeSuccessWrapper);
   successForm.appendChild(thanks);
   successForm.appendChild(weCallU);
-  successForm.appendChild(logoSuccess);
+  successForm.appendChild(successHref);
   success.appendChild(successForm);
   body.appendChild(success);
   body.insertBefore(parent, body.firstChild);
