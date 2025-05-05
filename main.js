@@ -44,9 +44,12 @@ document.addEventListener("DOMContentLoaded", () => {
     const submit = document.createElement('button')
     submit.setAttribute('class', 'submit')
     submit.innerText = 'Получить подарок'
+    const logoHref = document.createElement('a')
+    logoHref.setAttribute('href', 'https://jetybox.com/')
     const logo = document.createElement('img')
     logo.setAttribute('src', 'https://cdn.jsdelivr.net/gh/Sundalia/widjety/assets/logoJB.svg')
     logo.setAttribute('class', 'logo')
+    logoHref.appendChild(logo)
 
     form.appendChild(closeWrapper)
     form.appendChild(dialogHeader)
@@ -74,8 +77,11 @@ document.addEventListener("DOMContentLoaded", () => {
     const weCallU = document.createElement('h4')
     weCallU.innerText = `Мы свяжемся с вами в течение получаса`
     const logoSuccess = document.createElement('img')
+    const successHref = document.createElement('a')
+    successHref.setAttribute('href', 'https://jetybox.com/')
     logoSuccess.setAttribute('src', 'https://cdn.jsdelivr.net/gh/Sundalia/widjety/assets/logoJB.svg')
     logoSuccess.setAttribute('class', 'logo')
+    successHref.appendChild(logoSuccess)
     successForm.appendChild(closeSuccessWrapper)
     successForm.appendChild(thanks)
     successForm.appendChild(weCallU)
