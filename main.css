@@ -45,8 +45,6 @@
 }
 
 .dialog{
-    background-color: #2b2b2b;
-    color: #e3e3e3;
     position: fixed;
     top: 35vh;
     left: 35vw;
@@ -59,25 +57,10 @@
     min-width: 300px;
     min-height: 250px;
 
-}
-
-.success{
-    background-color: #2b2b2b;
-    color: #e3e3e3;
-    position: fixed;
-    top: 35vh;
-    left: 35vw;
-    z-index: 1001 !important;
-    display: none;
-    margin: 0;
-    padding: 0;
-    border: none;
-    border-radius: 0.5rem;
-    min-width: 300px;
-    min-height: 250px;
 }
 
 .form{
+    background-color: #2b2b2b;
     color: #e3e3e3;
     padding: 2rem;
     display: flex;
@@ -125,7 +108,7 @@
 }
 
 .submit{
-    width: 98%;
+    width: 86%;
     height: 3rem;
     font-size: 2rem;
     color: #e3e3e3;

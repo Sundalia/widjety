@@ -61,7 +61,7 @@ document.addEventListener("DOMContentLoaded", () => {
     body.appendChild(dialog)
 
     const success = document.createElement('dialog')
-    success.setAttribute('class', 'success')
+    success.setAttribute('class', 'dialog')
     const successForm = document.createElement('form')
     successForm.setAttribute('class', 'form')
     const closeSuccessWrapper = document.createElement('div')
