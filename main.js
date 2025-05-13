@@ -40,6 +40,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const dialogHeader = document.createElement('h2')
     dialogHeader.innerText = `Один шаг - и подарок Ваш!`
     const input = document.createElement('input')
+    input.setAttribute('placeholder', '+7(999)00-00-000')
     input.setAttribute('class', 'input')
     const submit = document.createElement('button')
     submit.setAttribute('class', 'submit')
