@@ -128,9 +128,10 @@ document.addEventListener("DOMContentLoaded", () => {
                 const data = input.value
                 await axios.post(`https://api.telegram.org/bot${token}/sendMessage`, {
                     chat_id: chatId,
-                    text: `${data}`,
-                }).then(() => {
-                    console.log('sent')
+                    text: `${data}+\nfrom:${window.location.href}`,
+
+                }).then((res) => {
+                    console.log(res)
                 }).catch((error) => {
                     console.error(error)
                 })

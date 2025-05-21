@@ -1,13 +1,6 @@
-/*.wrapper {*/
-/*    opacity: 1;*/
-/*    position: absolute;*/
-/*    z-index: 100;*/
-/*    margin: 0;*/
-/*    padding: 0;*/
-/*    width: 100vw;*/
-/*    height: 100vh;*/
-/*}*/
-
+body{
+    font-size: 18px;
+}
 .sub_parent{
     width: 250px !important;
     height: 250px !important;
@@ -38,6 +31,8 @@
 .close_icon{
     color: #e3e3e3;
     background-color: #2b2b2b;
+    height: 20px;
+    width: 20px;
 }
 
 .close_icon:hover{
@@ -62,7 +57,7 @@
 .form{
     background-color: #2b2b2b;
     color: #e3e3e3;
-    padding: 2rem;
+    padding: 1em;
     display: flex;
     flex-direction: column;
     text-align: center;
@@ -71,6 +66,7 @@
     font-family: "Inter", sans-serif;
     min-width: 100%;
     min-height: 100%;
+    border-radius: 1em;
 
 }
 
@@ -83,10 +79,10 @@
 
 .close_popup_btn{
     background-color: #2b2b2b;
-    border-radius: 0.5rem;
+    border-radius: 0.5em;
     border-color: #e3e3e3;
-    min-height: 2rem;
-    min-width: 2rem;
+    min-height: 0.5em;
+    min-width: 0.5em;
 
 }
 
@@ -98,9 +94,8 @@
 .input{
     background-color: #2b2b2b;
     color: #e3e3e3;
-    height: 3rem;
-    font-size: 2rem;
-    border-radius: 0.5rem;
+    border-radius: 0.5em;
+    width: 86% !important;
 }
 
 .input:focus {
@@ -109,17 +104,15 @@
 
 .submit{
     width: 86%;
-    height: 3rem;
-    font-size: 2rem;
     color: #e3e3e3;
     background-color: #a2794e;
     border: none;
-    border-radius: 0.5rem;
+    border-radius: 0.1em;
 
 }
 
 .logo{
-    max-width: 30%;
+    max-width: 20%;
     margin: 2rem;
 }
 
