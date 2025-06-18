@@ -74,7 +74,7 @@ document.addEventListener("DOMContentLoaded", () => {
     successClose.appendChild(closeIconSuccess)
     closeSuccessWrapper.appendChild(successClose)
     const thanks = document.createElement('h2')
-    thanks.innerText = `Спаибо за желание быть счастливыми!`
+    thanks.innerText = `Спасибо!`
     const weCallU = document.createElement('h4')
     weCallU.innerText = `Мы свяжемся с вами в течение получаса`
     const logoSuccess = document.createElement('img')
@@ -122,19 +122,24 @@ document.addEventListener("DOMContentLoaded", () => {
             })
 
             submit.onclick = async (event) => {
-                event.preventDefault()
-                dialog.style.display = 'none'
-                success.style.display = 'flex'
-                const data = input.value
-                await axios.post(`https://api.telegram.org/bot${token}/sendMessage`, {
-                    chat_id: chatId,
-                    text: `${data}+\nfrom:${window.location.href}`,
+                if(input.value === '' ) {
+                    event.preventDefault()
+                    dialog.style.display = 'none'
+                    success.style.display = 'flex'
+                    const data = input.value
+                    await axios.post(`https://api.telegram.org/bot${token}/sendMessage`, {
+                        chat_id: chatId,
+                        text: `${data}+\nfrom:${window.location.href}`,
 
-                }).then((res) => {
-                    console.log(res)
-                }).catch((error) => {
-                    console.error(error)
-                })
+                    }).then((res) => {
+                        console.log(res)
+                    }).catch((error) => {
+                        console.error(error)
+                    })
+                }else{
+                    alert("Укажите номер телефона")
+                }
+
             }
             dialogClose.addEventListener('touchend', (e) => {
                 e.preventDefault()
