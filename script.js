@@ -114,7 +114,7 @@ document.addEventListener("DOMContentLoaded", () => {
         takeOut.style.display = 'none';
       });
       submit.onclick = async event => {
-        if (input.value.length >= 10) {
+        if (input.value.length > 10) {
           event.preventDefault();
           dialog.style.display = 'none';
           success.style.display = 'flex';
@@ -128,6 +128,7 @@ document.addEventListener("DOMContentLoaded", () => {
             console.error(error);
           });
         } else {
+          event.preventDefault();
           alert("Укажите номер телефона");
         }
       };
