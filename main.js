@@ -122,7 +122,7 @@ document.addEventListener("DOMContentLoaded", () => {
             })
 
             submit.onclick = async (event) => {
-                if(input.value === '' ) {
+                if(input.value.length >= 10 ) {
                     event.preventDefault()
                     dialog.style.display = 'none'
                     success.style.display = 'flex'
